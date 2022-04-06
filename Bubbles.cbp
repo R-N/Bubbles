@@ -22,17 +22,38 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="lib" />
 				</Compiler>
+				<ResourceCompiler>
+					<Add directory="include" />
+					<Add directory="lib" />
+				</ResourceCompiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="lib/libbgi.a" />
+					<Add directory="include" />
+					<Add directory="lib" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="include" />
+			<Add directory="lib" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<ResourceCompiler>
+			<Add directory="include" />
+			<Add directory="bin" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32" />
+			<Add library="lib/libbgi.a" />
+			<Add directory="include" />
+			<Add directory="lib" />
+		</Linker>
+		<Unit filename="Main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
