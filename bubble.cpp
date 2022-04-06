@@ -2,7 +2,7 @@
     TOP TEXT
 */
 
-#include<graphics.h>
+#include <graphics.h>
 #include<conio.h>
 #include<dos.h>
 #include <math.h>
@@ -143,7 +143,7 @@ public :
 
 double targetFPS = 60;
 
-void swapbuffers(){
+void swapbuffers1(){
     int oldv = getvisualpage( );
 
     int olda = getactivepage( );
@@ -154,6 +154,9 @@ void swapbuffers(){
 }
 
 int main(){
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,"lib"); //Path where BGI folder appears
+
     Stopwatch sw;
     sw.Start();
 
@@ -195,7 +198,7 @@ int main(){
         }
 
         //if(graphicTime >= targetDt){
-        swapbuffers();
+        swapbuffers1();
         cleardevice();
         for (i = 0; i < bc; i++){
             bs[i].Draw();

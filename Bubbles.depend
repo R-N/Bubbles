@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1649225652 source:d:\github\bubbles\bubble.cpp
+	<graphics.h>
+	<conio.h>
+	<dos.h>
+	<math.h>
+	<stdio.h>
+	<time.h>
+
+1649225191 d:\github\bubbles\include\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+
